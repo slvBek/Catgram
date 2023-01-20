@@ -1,0 +1,23 @@
+.cont
+  width: 400px
+  height: 200px
+  overflow: hidden
+  margin-top: -200px
+  animation: move 5s infinite linear
+  
+.cat
+  animation: walk 1s infinite steps(12)
+  
+  
+@keyframes move
+  0%
+    transform: translateX(1600px)
+  100%
+    transform: translateX(-200px)
+  
+@keyframes walk
+  0%
+    transform: translateY(0px)
+  100%
+    transform: translateY(-2400px)
+  

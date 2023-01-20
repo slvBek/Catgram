@@ -1,0 +1,51 @@
+.sss {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.seperator {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: rgb(142, 142, 142);
+    margin-top: 10px;
+}
+.seperator > div:not(.seperator-text) {
+    border: none;
+    border-top: 1px solid rgb(219, 219, 219);
+    flex: 1;
+}
+.seperator .seperator-text {
+    width: 55px;
+    text-align: center;
+}
+.facebook-login {
+    all: unset;
+    font-family: 'Roboto', sans-serif;
+    margin: 8px 87px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.facebook-login > img {
+    margin-right: 8px;
+}
+.facebook-login > span {
+    color: rgb(56, 81, 133);
+    font-size: 14px;
+    font-weight: 600;
+}
+.password {
+    margin: 8px 125px;
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(0, 55, 107);
+    margin-top: 12px;
+}
+img {
+    max-width: 120%;
+}
+.lapkaimage {
+    margin-top: -32px;
+}
+.container {
+    margin-top: -65px;
+}

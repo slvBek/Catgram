@@ -1,0 +1,123 @@
+:root {
+  --main-color: #e02f6b;
+  --blue: #0000ff;
+  --blue-dark: #18293c;
+  --orange: #ffa500;
+  --green-yellow: #cddc39;
+  --pink-light: #efa2b4;
+  --cyan-light: #aef1ee;
+  --white: #ffffff;
+  --white-alpha-40: rgba(255, 255, 255, 0.40);
+  --white-alpha-25: rgba(255, 255, 255, 0.25);
+  --backdrop-filter-blur: blur(5px);
+}
+.bg-gray-background {
+  background-image: linear-gradient(to bottom right,var(--pink-light), var(--cyan-light));
+}
+
+.bg-circles{ filter: blur(8px);
+  -webkit-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  height: 100%;
+  max-width: 1200px;
+  width: calc(100% - 30px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bg-circles div{
+  position: absolute;
+  border-radius: 50%;
+}
+.bg-circles .circle-1{
+  height: 60px;
+  width: 60px;
+  background-color: var(--blue);
+  left: 5%;
+  top: 10%;
+  opacity: 0.3;
+  animation: zoomInOut 8s linear infinite;
+}
+.bg-circles .circle-2{
+  height: 80px;
+  width: 80px;
+  background-color: var(--main-color);
+  left: 30%;
+  top: 50%;
+  opacity: 0.4;
+}
+.bg-circles .circle-3{
+  height: 120px;
+  width: 120px;
+  background-color: var(--white);
+  top: 40%;
+  right: -60px;
+  opacity: 0.6;
+  animation: bounceTop 5s ease-in-out infinite;
+}
+.bg-circles .circle-4{
+  height: 50px;
+  width: 50px;
+  background-color: var(--orange);
+  top: 80%;
+  left: -30px;
+  opacity: 0.6;
+}
+.section {
+  background: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+  min-height: calc(100vh - 70px);
+  border-radius: 30px;
+  backdrop-filter: var(--backdrop-filter-blur);
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+@keyframes zoomInOut{
+  0%,100%{
+      transform: scale(0.5);
+  }
+  50%{
+      transform: scale(1);
+  }
+}
+
+@keyframes bounceTop {
+  0%,100%{
+      transform: translateY(-50px);
+  }
+  50%{
+      transform: translateY(0px);
+  }
+}
+section.active{
+  display: block;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+section.fade-out{
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+@keyframes fadeIn{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+@keyframes fadeOut{
+  0%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+  }
+}
