@@ -65,7 +65,7 @@ export default function Signup() {
     <>
     <div className="sss">
     <img src={bekIcon} alt=""/>
-    <div className="container flex mx-auto max-w-screen-md items-center h-screen">
+    <div className="con flex mx-auto max-w-screen-md items-center h-screen">
       <div className="hidden lg:flex w-1/2 justify-end">
         <img src={iPhonePic} className="max-h-120" alt="iphone with ig app" />
       </div>
